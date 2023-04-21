@@ -1,0 +1,29 @@
+<body>
+<div class="wrapper">
+  <h1>Welcome Back!</h1>
+  <h2>Login Here</h2>
+  <form name="form"
+        (ngSubmit)="onSubmit()"
+        #f="ngForm" novalidate>
+
+    <div class="input-box">
+        <label for="username">Email</label>
+        <input required type="text" name="username" id= "email" [(ngModel)]="form.username" #username="ngModel" /> 
+    </div>
+
+    <div class="input-box">
+        <label for="password">Password</label>
+      <input type="password" name="password" id="password" [(ngModel)]="form.password" required #password="ngModel" />
+    </div>
+    <div>
+        <button style="margin-top: 20px;width: 100%; height: 35px; text-decoration: none; color: black;"><a routerLink="/posts">Submit </a></button>
+    </div>
+    <div class="text">
+      <h3>Don't have an account? <a routerLink="/register">Register here</a></h3>
+    </div>
+  </form>
+</div>
+
+
+
+

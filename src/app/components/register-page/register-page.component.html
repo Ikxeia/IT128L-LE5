@@ -1,0 +1,38 @@
+
+
+<body>
+    <div class="wrapper">
+      <h2>Registration</h2>
+      <form name="form"
+            (ngSubmit)="onSubmit()"
+            #f="ngForm">
+
+        <div class="input-box">
+            <label for="username">Username</label>
+            <input type="text" name="username" [(ngModel)]="form.username" required #username="ngModel" /> 
+        </div>
+
+        <div class="input-box">
+            <label for="password">Password</label>
+          <input type="password" name="password" [(ngModel)]="form.password" required #password="ngModel" />
+        </div>
+
+        <div class="input-box">
+            <label for="firstName">First Name</label>
+          <input type="text" name="firstName" [(ngModel)]="form.firstName" required #firstName="ngModel" />
+        </div>
+
+        <div class="input-box">
+            <label for="lastName">Last Name</label>
+          <input type="lastName" name="lastName" [(ngModel)]="form.lastName" required #lastName="ngModel"/>
+        </div>
+        
+        <div>
+            <button style="margin-top: 20px;width: 100%; height: 35px;">Submit</button>
+        </div>
+        <div class="text">
+          <h3>Already have an account? <a routerLink="/login">Login now</a></h3>
+        </div>
+      </form>
+    </div>
+  </body>
